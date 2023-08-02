@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Rudak Projects 
-          Portfolio
+          Portfolio V. 1.0
         </p>
         
       </header>
