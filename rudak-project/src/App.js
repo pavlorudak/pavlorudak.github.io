@@ -6,37 +6,35 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      
-      <header className="App-header">
-      <BrowserRouter>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+    <Router>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Rudak Projects 
-          Portfolio V. 1.0
-        </p>
-        
-      </header>
+      <hr />
+
+      <Route path="/" exact component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/projects" component={Projects} />
+      <Route path="/contact" component={Contact} />
     </div>
-  );
+  </Router>
+);
+
 }
 
 export default App;
