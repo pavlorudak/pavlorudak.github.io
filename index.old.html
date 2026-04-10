@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.5;
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 220px;
+        }
+
+        .company-details {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .invoice-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a4a7c;
+            margin-bottom: 10px;
+        }
+
+        .billing-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-bottom: 2px solid #1a4a7c;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .totals-table {
+            width: 320px;
+            margin-left: auto;
+            margin-top: 20px;
+        }
+
+        .totals-table td {
+            border: none;
+            padding: 5px 0;
+        }
+
+        .grand-total {
+            font-weight: bold;
+            font-size: 18px;
+            border-top: 2px solid #1a4a7c !important;
+        }
+
+        .reverse-charge-note {
+            background-color: #fcf8e3;
+            border: 1px solid #faebcc;
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="LOGO.jpeg" class="logo" alt="GladDryline Logo">
+        <div class="company-details">
+            <div class="invoice-title">VAT INVOICE</div>
+            <strong>GladDryline Ltd</strong><br>
+            4 Leyland Close, Cheshunt, EN8 OND<br>
+            Company No: 16669277 | UTR: 1017819562<br>
+            <strong>VAT Reg No: 514 3063 29</strong>
+        </div>
+    </div>
+
+    <div class="billing-info">
+        <div>
+            <strong>Bill To:</strong><br>
+            UVB INTERIOR PROJECTS LTD
+        </div>
+        <div style="text-align: right;">
+            <strong>Invoice Number:</strong> 14<br>
+            <strong>Date:</strong> 10/04/2026
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Description of Works</th>
+                <th style="text-align: right;">Gross Labour (£)</th>
+                <th style="text-align: right;">CIS 20% (£)</th>
+                <th style="text-align: right;">Net (£)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Drylining works completed at Buckingham Palace, Holborn/Barkingside Police Stations, Hammersmith,
+                    Hackney and Morgan Stanley (16.03.26 - 29.03.26)</td>
+                <td style="text-align: right;">9,411.25</td>
+                <td style="text-align: right;">1,882.25</td>
+                <td style="text-align: right;">7,529.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="totals-table">
+        <tr>
+            <td>Total Net (after CIS):</td>
+            <td style="text-align: right;">£7,529.00</td>
+        </tr>
+        <tr>
+            <td>VAT Rate:</td>
+            <td style="text-align: right;">0% (Reverse Charge)</td>
+        </tr>
+        <tr class="grand-total">
+            <td>Amount Due:</td>
+            <td style="text-align: right;">£7,529.00</td>
+        </tr>
+    </table>
+
+    <div class="reverse-charge-note">
+        <strong>VAT Reverse Charge:</strong> Customer to account to HMRC for the reverse charge output tax on the VAT
+        exclusive price of items marked ‘reverse charge’ at the relevant VAT rate.<br>
+        <em>Total VAT to be accounted for by customer: £1,882.25 (at 20% rate).</em>
+    </div>
+
+    <div class="footer">
+        <strong>Payment Details:</strong><br>
+        Bank: GladDryline Ltd | Account No: 87281966 | [span_0](start_span)Sort Code: 60-83-71[span_0](end_span)
+    </div>
+</body>
+
+</html>
