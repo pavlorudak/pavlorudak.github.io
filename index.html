@@ -418,11 +418,11 @@
 
             <!-- Live totals preview -->
             <div class="totals-preview" id="totals-preview">
-                <span class="label-col">Gross Labour:</span>
+                <span class="label-col">Subtotal:</span>
                 <span class="value-col" id="prev-gross">£0.00</span>
-                <span class="label-col">CIS 20% deduction:</span>
+                <span class="label-col">VAT (20%) Reverse Charge:</span>
                 <span class="value-col" id="prev-cis">£0.00</span>
-                <span class="label-col total-row">Total payable:</span>
+                <span class="label-col total-row">Amount Due:</span>
                 <span class="value-col total-row" id="prev-net">£0.00</span>
             </div>
 
@@ -479,16 +479,12 @@
                 <thead>
                     <tr>
                         <th>Description of Works</th>
-                        <th style="text-align:right;">Gross Labour (£)</th>
-                        <th style="text-align:right;">CIS 20% (£)</th>
-                        <th style="text-align:right;">Total (£)</th>
+                        <th style="text-align:right;">Amount (£)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td id="out-desc">–</td>
-                        <td style="text-align:right;" id="out-gross">–</td>
-                        <td style="text-align:right;" id="out-cis">–</td>
                         <td style="text-align:right;" id="out-net">–</td>
                     </tr>
                 </tbody>
@@ -496,12 +492,12 @@
 
             <table class="inv-totals">
                 <tr>
-                    <td>Total:</td>
+                    <td>Subtotal:</td>
                     <td style="text-align:right;" id="out-total-net">£–</td>
                 </tr>
                 <tr>
-                    <td>VAT Rate:</td>
-                    <td style="text-align:right;">0% (Reverse Charge)</td>
+                    <td>VAT (20%) Reverse Charge:</td>
+                    <td style="text-align:right;" id="out-cis">£–</td>
                 </tr>
                 <tr class="inv-grand">
                     <td>Amount Due:</td>
@@ -573,8 +569,8 @@
             document.getElementById('out-number').textContent = number;
             document.getElementById('out-date').textContent = fmtDate(date);
             document.getElementById('out-desc').textContent = desc;
-            document.getElementById('out-gross').textContent = fmt(gross);
-            document.getElementById('out-cis').textContent = fmt(cis);
+            if (document.getElementById('out-gross')) document.getElementById('out-gross').textContent = fmt(gross);
+            document.getElementById('out-cis').textContent = '£' + fmt(cis);
             document.getElementById('out-net').textContent = fmt(net);
             document.getElementById('out-total-net').textContent = '£' + fmt(net);
             document.getElementById('out-amount-due').textContent = '£' + fmt(net);
